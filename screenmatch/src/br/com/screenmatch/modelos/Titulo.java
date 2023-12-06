@@ -1,11 +1,12 @@
-package br.com.screenmatch.www;
-public class Filme {
-private String nome;
-private int anoDeLancamento;
-boolean incluidoNoPlano;
-private double somaDasAvaliacoes;
-private int totalDeavaliacoes;
-int duracaoEmMinutos;
+package br.com.screenmatch.modelos;
+
+public class Titulo {
+    private String nome;
+    private int anoDeLancamento;
+    boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeavaliacoes;
+    int duracaoEmMinutos;
 
     public String getNome() {
         return nome;
@@ -24,13 +25,13 @@ int duracaoEmMinutos;
     }
 
     public int getTotalDeavaliacoes(){
-    return totalDeavaliacoes;
-}
+        return totalDeavaliacoes;
+    }
 
-public void exibeFichaTecnica(){
-    System.out.println("Nome do filme" + nome);
-    System.out.println("Ano de lançamento: " + anoDeLancamento);
-}
+    public void exibeFichaTecnica(){
+        System.out.println("Nome do filme" + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -49,13 +50,14 @@ public void exibeFichaTecnica(){
     }
 
     public void avalia(double nota){
-    somaDasAvaliacoes += nota;
-    totalDeavaliacoes++;
-}
-public double pegaMedia(){
-    return somaDasAvaliacoes / totalDeavaliacoes;
+        somaDasAvaliacoes += nota;
+        totalDeavaliacoes++;
+    }
+    public double pegaMedia(){
+        return somaDasAvaliacoes / totalDeavaliacoes;
 
-}
+    }
+
 
 
 
